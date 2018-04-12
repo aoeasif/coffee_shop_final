@@ -1,0 +1,48 @@
+<div id="main_container">
+
+
+    <div class="wrapper">
+        <div class="card">
+            <div id="login_section">
+                <h2>Login</h2>
+                <p>Enter your registered username and password</p>
+                <form action="login.php" method="post" name="login_form" onsubmit="return login_form_field_validation()">
+                    <span id="login_submit_error" class="form_error">
+                        <?php echo_var($error["login_failed"]); ?>
+                    </span>
+                    <div id="username" class="form_field">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username">
+                        <span id="username_error" class="form_error clearfix">
+                            <?php echo_var($error["username_error"]); ?>
+                        </span>
+                    </div>
+                    <div id="password" class="form_field">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password">
+                        <span id="password_error" class="form_error clearfix">
+                            <?php echo_var($error["password_error"]); ?>
+                        </span>
+                    </div>
+                    <div id="submit_button" class="form_field">
+                        <input type="submit" name="login_submit" value="Login">
+                    </div>
+                    <div class="form_extra">
+                        <span class="forgot_password">
+                            <p>
+                                <a href="forgot_password.php">Forgot password?</a>
+                            </p>
+                        </span>
+                        <span class="create_new_account_link">
+                            <p>
+                                <a href="signup.php">Create a new account</a>
+                            </p>
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
